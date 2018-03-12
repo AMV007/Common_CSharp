@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E4031A0-C239-4374-8667-4F6F2B2E3A34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonControls</RootNamespace>
+    <AssemblyName>CommonControls</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugLTR22|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugLTR22\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseObfuscate|AnyCPU'">
+    <OutputPath>bin\ReleaseObfuscate\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.DirectSound.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonForms\FileOpenControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonForms\FileOpenControl.Designer.cs">
+      <DependentUpon>FileOpenControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\FileSaveControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonForms\FileSaveControl.Designer.cs">
+      <DependentUpon>FileSaveControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonMethods\Archive\Tar\DataWriter.cs" />
+    <Compile Include="CommonMethods\Archive\Tar\IArchiveDataWriter.cs" />
+    <Compile Include="CommonMethods\Archive\Tar\ITarHeader.cs" />
+    <Compile Include="CommonMethods\Archive\Tar\LegacyTarWriter.cs" />
+    <Compile Include="CommonMethods\Archive\Tar\TarException.cs" />
+    <Compile Include="CommonMethods\Archive\Tar\TarHeader.cs" />
+    <Compile Include="CommonMethods\Archive\Tar\TarReader.cs" />
+    <Compile Include="CommonMethods\Archive\Tar\TarWriter.cs" />
+    <Compile Include="CommonMethods\Archive\Tar\UsTarHeader.cs" />
+    <Compile Include="CommonMethods\c_CommandArguments.cs" />
+    <Compile Include="CommonMethods\LongIO\c_FileAttributes.cs" />
+    <Compile Include="CommonMethods\LongIO\c_FileSystemInfo.cs" />
+    <Compile Include="CommonMethods\LongIO\Directory.cs" />
+    <Compile Include="CommonMethods\LongIO\File.cs" />
+    <Compile Include="CommonMethods\LongIO\Path.cs" />
+    <Compile Include="CommonMethods\MyEncoding\c_base64.cs" />
+    <Compile Include="CommonMethods\MyEncoding\c_encoding.cs" />
+    <Compile Include="CommonMethods\Net\c_Traffic.cs" />
+    <Compile Include="CommonMethods\Sound\Player.cs" />
+    <Compile Include="c_NetFrameworkVersion.cs" />
+    <Compile Include="Devices\c_HDD_Smart.cs" />
+    <Compile Include="Display\ADC\AdcControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Display\ADC\PanelADC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Display\AFC\AFCLogControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonForms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\ControlWithLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonForms\ControlWithLabel.Designer.cs">
+      <DependentUpon>ControlWithLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonMethods\AccessDB\c_AccessDataBase.cs" />
+    <Compile Include="CommonMethods\AutoStart.cs" />
+    <Compile Include="CommonMethods\ImgWork\ImgRotation.cs" />
+    <Compile Include="CommonMethods\MyEncoding\c_EncodingTools.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\CMLangConvertCharset.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\CMLangConvertCharsetClass.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\CMLangString.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\CMLangStringClass.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\CMultiLanguage.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\CMultiLanguageClass.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IEnumCodePage.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IEnumRfc1766.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IEnumScript.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMLangCodePages.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMLangConvertCharset.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMLangFontLink.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMLangFontLink2.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMLangLineBreakConsole.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMLangString.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMLangStringAStr.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMLangStringBufA.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMLangStringBufW.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMLangStringWStr.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMultiLanguage.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMultiLanguage2.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IMultiLanguage3.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\ISequentialStream.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\IStream.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagDetectEncodingInfo.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagMIMECONTF.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagMIMECPINFO.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagMIMECSETINFO.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagMLCPF.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagMLDETECTCP.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagMLSTR_FLAGS.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagRFC1766INFO.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagSCRIPFONTINFO.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagSCRIPTINFO.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagSTATSTG.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\tagUNICODERANGE.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\_FILETIME.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\_LARGE_INTEGER.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\_RemotableHandle.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\_ULARGE_INTEGER.cs" />
+    <Compile Include="CommonMethods\MyEncoding\Multilang\__MIDL_IWinTypes_0009.cs" />
+    <Compile Include="CommonMethods\Net\c_DownloadFile.cs" />
+    <Compile Include="CommonMethods\Net\c_WebConn.cs" />
+    <Compile Include="CommonMethods\Net\c_WebPage.cs" />
+    <Compile Include="c_AppConf.cs" />
+    <Compile Include="c_Broaching.cs" />
+    <Compile Include="c_CircularBuffer.cs" />
+    <Compile Include="CommonForms\GetString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForms\GetString.Designer.cs">
+      <DependentUpon>GetString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\PhotoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonForms\PhotoControl.Designer.cs">
+      <DependentUpon>PhotoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\CircularIndicator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonForms\CircularIndicator.designer.cs">
+      <DependentUpon>CircularIndicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="c_CommonFunc.cs" />
+    <Compile Include="c_CRC.cs" />
+    <Compile Include="c_DialUp.cs" />
+    <Compile Include="c_SysIOUnicode.cs" />
+    <Compile Include="Devices\DeviceManagement.cs" />
+    <Compile Include="Devices\HIDDevice.cs" />
+    <Compile Include="Devices\HotKey.cs" />
+    <Compile Include="Devices\Win32Com.cs" />
+    <Compile Include="Display\DigitalControlsMath.cs" />
+    <Compile Include="Display\DirectXDevice.cs" />
+    <Compile Include="Display\OscilControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Display\OscilControl.Designer.cs">
+      <DependentUpon>OscilControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display\SimplePlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Display\SimplePlot.Designer.cs">
+      <DependentUpon>SimplePlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display\SpectrControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Display\SpectrControl.Designer.cs">
+      <DependentUpon>SpectrControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Display\XYPlotControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Display\XYPlotControl.Designer.cs">
+      <DependentUpon>XYPlotControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="c_ErrorDataWork.cs" />
+    <Compile Include="CommonMethods\LongIO\DirectoryInfo.cs" />
+    <Compile Include="CommonMethods\LongIO\FileInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="c_SysIO.cs" />
+    <Compile Include="Win32Api\advapi32.cs" />
+    <Compile Include="Win32Api\Debugging.cs" />
+    <Compile Include="Win32Api\hid.cs" />
+    <Compile Include="Win32Api\kernel32.cs" />
+    <Compile Include="Win32Api\mscoree.cs" />
+    <Compile Include="Win32Api\rasapi32.cs" />
+    <Compile Include="Win32Api\setupapi.cs" />
+    <Compile Include="Win32Api\shell32.cs" />
+    <Compile Include="Win32Api\user32.cs" />
+    <Compile Include="Win32Api\c_winerror.cs" />
+    <Compile Include="Win32Api\wininet.cs" />
+    <Compile Include="Win32Api\winmm.cs" />
+    <Compile Include="WinCEApi\coredll.cs" />
+    <Compile Include="WinCECommon\c_AppConf.cs" />
+    <Compile Include="WinCECommon\c_ErrorDataWork.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommonForms\FileOpenControl.resx">
+      <DependentUpon>FileOpenControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\FileSaveControl.resx">
+      <DependentUpon>FileSaveControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Display\ADC\AdcControl.resx">
+      <DependentUpon>AdcControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Display\ADC\PanelADC.resx">
+      <DependentUpon>PanelADC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Display\AFC\AFCLogControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AFCLogControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\GetString.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GetString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\PhotoControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PhotoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\CircularIndicator.resx">
+      <DependentUpon>CircularIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForms\ControlWithLabel.resx">
+      <DependentUpon>ControlWithLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Display\OscilControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OscilControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Display\SimplePlot.resx">
+      <DependentUpon>SimplePlot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Display\SpectrControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpectrControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Display\XYPlotControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XYPlotControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder_Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Offline.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == ReleaseObfuscate (
+"C:\Program Files (x86)\Microsoft Visual Studio 12.0\PreEmptive Solutions\Dotfuscator and Analytics Community Edition\dotfuscator.exe" /in:$(TargetFileName) /out:"$(TargetDir)\Dotfuscated"
+)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
